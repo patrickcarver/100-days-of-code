@@ -23,6 +23,6 @@ SweetXml looks like it has some nice and easy ways to turn the nodes into Elixir
 less cleanup beforehand.
 
 That said, I was successful in getting the xml to parse and got the app to print out the
-Speaker of the House's name (Philp A. Gunn, by the way).
+Speaker of the House's name (Philip A. Gunn, by the way).
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
