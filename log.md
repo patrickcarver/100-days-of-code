@@ -1,30 +1,28 @@
 # 100 Days Of Code - Log
 
-### Day 0: February 30, 2016 (Example 1)
-##### (delete me or comment me out)
+### Day 1: January 3, 2017, Monday
 
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+**Today's Progress**:
+Started first app: Mississippi Legislature Data Slurper aka "MsLegis"
 
-**Thoughts:** I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
+**Thoughts:**
+I started an app that would download and parse the xml from the
+MS Legislature website which contains info on all its members. Then, it will store
+the parsed data in a database (a NoSQL one perhaps?) I'm doing it in Elixir
+so I can gain experience in that language.
 
-**Link to work:** [Calculator App](http://www.example.com)
+Found 2 modules to use; HTTPotion to get the xml from the site and SweetXml to parse it.
+HTTPotion is a no-brainer to use, but SweetXml is more tricksy. I had to clean out
+the tab and endline chars along with the metadata at the top of the document in
+order for it to start parsing. Plus, querying the XML nodes is case sensitive,
+important to know since the nodes are in ALL CAPS and using lower case to search
+returns _nil_.
 
-### Day 0: February 30, 2016 (Example 2)
-##### (delete me or comment me out)
+SweetXml looks like it has some nice and easy ways to turn the nodes into Elixir
+"objects", but I wonder if the other Elixir XML modules out there would require
+less cleanup beforehand.
 
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+That said, I was successful in getting the xml to parse and got the app to print out the
+Speaker of the House's name (Philp A. Gunn, by the way).
 
-**Thoughts**: I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
-
-**Link(s) to work**: [Calculator App](http://www.example.com)
-
-
-### Day 1: June 27, Monday
-
-**Today's Progress**: I've gone through many exercises on FreeCodeCamp.
-
-**Thoughts** I've recently started coding, and it's a great feeling when I finally solve an algorithm challenge after a lot of attempts and hours spent.
-
-**Link(s) to work**
-1. [Find the Longest Word in a String](https://www.freecodecamp.com/challenges/find-the-longest-word-in-a-string)
-2. [Title Case a Sentence](https://www.freecodecamp.com/challenges/title-case-a-sentence)
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
