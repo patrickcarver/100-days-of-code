@@ -45,6 +45,36 @@ Lastly, I refactored by scooping all that list creation in to a function.
 Not a huge milestone. I have church supper on Wednesdays and a Bible study with a
 friend of mine first thing Thursday morning to prepare for, so Wednesday evenings
 aren't going to be huge in output. Though, I did accomplish a nice and
-necessary piece of the app. 
+necessary piece of the app.
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+### Day 3: January 5, 2017, Thursday
+
+**Today's Progress**:
+Got the members' xml pages to load into memory
+
+**Thoughts:**
+Explored if SweetXml could parse xml without me having to remove the first 5 lines
+of metadata in the roster and members' page as well as all the tab and endline chars.  Verdict: Nope. I tried the "parse" function, but it just threw an unhelpful error.
+
+I was able to list the member xml files to the cmd line. When I tried to concatenate
+the name of the xml files with the base url, I kept getting an error. Turns out
+HTTPotion spits out character lists aka single-quote strings for the member xml
+file names, but my base url string was a binary aka double-quote strings. In Elxir,
+you can't put those together. So, I converted the character lists to binaries, and,
+voila, it worked.
+
+I also got the xml files themselves to load and spew their contents straight to
+the command line, though it errored on Mims's page I think because of the quotation
+marks in a section. I changed it to print out the party affiliation and again it
+errored after displaying a good many. I'll have to figure out tomorrow what it's
+choking on.   
+
+Need to refactor out the common code in the "clean_list_xml" and "clean_member_xml"
+functions since they differ only in the string that contains the xml metadata that
+needs to be removed.
+
+Also, I need to write actual tests for this thing.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
