@@ -78,3 +78,29 @@ needs to be removed.
 Also, I need to write actual tests for this thing.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+### Day 4: January 7, 2017, Saturday
+
+**Today's Progress**:
+Refactored clean xml functions into module. Refactored code for xml processing.
+
+**Thoughts**:
+Spent Friday moving cubicle pieces for new office, so took the evening off to rest.
+
+I cleaned up the functions that remove the xml metadata for the member list and
+member profile xml pages and are now a module. The strings I used to remove
+the metadata are now in a module struct.
+
+Also, refactored the xml processing by creating more functions. Moved the
+HTTPotion outside those functions so they aren't dependent on it, i.e., it will
+be easier to change to something else if I so decide.
+
+On the git front, I remembered to start using branches instead of checking in
+on the master branch.
+
+Added a couple of tests of the xml metadata, but relied they were pointless.
+Just testing a string in the struct to a string in the test doesn't matter.
+
+Overall, the app doesn't do anything more, but is structured cleaner.
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
