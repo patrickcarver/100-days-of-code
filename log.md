@@ -104,3 +104,30 @@ Just testing a string in the struct to a string in the test doesn't matter.
 Overall, the app doesn't do anything more, but is structured cleaner.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+## Day 5: January 8, 2017, Sunday
+
+**Today's Progress**:
+Create module to store xquery ...er... queries and a module to perform those queries.
+
+**Thoughts**:
+Another day of refactoring, this time focusing on the `create_list` function in
+the main module.
+
+I researched SweetXml functions and saw that I could dynamically put in text
+by using `sigil_x` instead of `~x`. This let me put the actual queries in a struct
+that could be used by functions that execute said queries.
+
+I created a module to place the xquery-running functions and named it `GetLinks`
+with functions `get_officer_link` and `get_member_links`. After looking
+at the code for a little bit, I realized those functions were pretty generic.
+`get_officer_link` just returned text and `get_member_links` returned a list. So,
+I renamed them `get_text` and `get_list`, respectively, and renamed the module `GetXQueryResult`.
+
+For tomorrow, I want to try to make the `GetXQueryResult` more generic and not
+rely directly on the SweetXml module, i.e., make it easier to swap in another
+Elixir xml module (which I may do at some point for comparison's sake).
+
+Oh yeah, I _still_ need to write tests.
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
