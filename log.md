@@ -131,3 +131,20 @@ Elixir xml module (which I may do at some point for comparison's sake).
 Oh yeah, I _still_ need to write tests.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+## Day 6: January 11, 2017, Wednesday
+**Today's Progress**:
+Fixed runtime errors. Started getting assigning variables from member xml data.
+
+**Thoughts**
+Moving furniture all day for my new office on Monday and working out on Tuesday
+left me very tired those evenings to I only did a few minutes of coding. I did
+wake up early on Wednesday morning and made up some time.
+
+I ran the app and fixed runtime issues due to using binaries instead of charlists.
+
+I did find an option for `SweetXml`'s `xpath` function to return a list of
+strings rather then a charlist that needs to be run through an `Enum.map` to convert
+to strings.   
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
