@@ -148,3 +148,20 @@ strings rather then a charlist that needs to be run through an `Enum.map` to con
 to strings.   
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+## Day 7: January 12, 2017, Thursday
+**Today's Progress**:
+Piddled with getting a stubborn member xml file to process.
+
+**Thoughts**
+Early morning Bible study + long day at work = not very productive evening of coding.
+
+There is an issue with the member xml page for Representative Sam Mims. In the text
+for his bio, there are two funky quote characters that I'm sure are the
+cause of the app throwing up when trying to parse it.
+
+I've put in some coding to confirm my suspicions and I'm trying to figure a way
+to handle the issue.  Not too much progress because sleep grasped me in its loving
+embrace not to long after I started coding.
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
