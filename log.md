@@ -2,7 +2,7 @@
 
 ### Day 1: January 3, 2017, Tuesday
 
-**Today's Progress**:
+**Today's Progress:**
 Started first app: Mississippi Legislature Data Slurper aka "MsLegis"
 
 **Thoughts:**
@@ -29,7 +29,7 @@ Speaker of the House's name (Philip A. Gunn, by the way).
 
 ### Day 2: January 4, 2017, Wednesday
 
-**Today's Progress**:
+**Today's Progress:**
 Created list of House member's xml files from main House member listing.
 
 **Thoughts:**
@@ -51,7 +51,7 @@ necessary piece of the app.
 
 ### Day 3: January 5, 2017, Thursday
 
-**Today's Progress**:
+**Today's Progress:**
 Got the members' xml pages to load into memory
 
 **Thoughts:**
@@ -81,10 +81,10 @@ Also, I need to write actual tests for this thing.
 
 ### Day 4: January 7, 2017, Saturday
 
-**Today's Progress**:
+**Today's Progress:**
 Refactored clean xml functions into module. Refactored code for xml processing.
 
-**Thoughts**:
+**Thoughts:**
 Spent Friday moving cubicle pieces for new office, so took the evening off to rest.
 
 I cleaned up the functions that remove the xml metadata for the member list and
@@ -107,10 +107,10 @@ Overall, the app doesn't do anything more, but is structured cleaner.
 
 ## Day 5: January 8, 2017, Sunday
 
-**Today's Progress**:
+**Today's Progress:**
 Create module to store xquery ...er... queries and a module to perform those queries.
 
-**Thoughts**:
+**Thoughts:**
 Another day of refactoring, this time focusing on the `create_list` function in
 the main module.
 
@@ -133,10 +133,10 @@ Oh yeah, I _still_ need to write tests.
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
 ## Day 6: January 11, 2017, Wednesday
-**Today's Progress**:
+**Today's Progress:**
 Fixed runtime errors. Started getting assigning variables from member xml data.
 
-**Thoughts**
+**Thoughts:**
 Moving furniture all day for my new office on Monday and working out on Tuesday
 left me very tired those evenings to I only did a few minutes of coding. I did
 wake up early on Wednesday morning and made up some time.
@@ -150,10 +150,10 @@ to strings.
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
 ## Day 7: January 12, 2017, Thursday
-**Today's Progress**:
+**Today's Progress:**
 Piddled with getting a stubborn member xml file to process.
 
-**Thoughts**
+**Thoughts:**
 Early morning Bible study + long day at work = not very productive evening of coding.
 
 There is an issue with the member xml page for Representative Sam Mims. In the text
@@ -163,5 +163,31 @@ cause of the app throwing up when trying to parse it.
 I've put in some coding to confirm my suspicions and I'm trying to figure a way
 to handle the issue.  Not too much progress because sleep grasped me in its loving
 embrace not to long after I started coding.
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+## Day 8: January 13, 2017, Friday
+**Today's Progress:**
+Conquered the the parsing issue with Sam Mim's xml page. Abstracted out fetching
+xml from URLs.
+
+**Thoughts:**
+And early bedtime the night before meant a very early rising for yours truly.
+A great time to catch up on some coding.
+
+...And... Huzzah! Fixed the parsing of Mim's page! It was the two weird quote characters
+that was gumming things up; the stumbling block for me was figuring out what
+exactly the app saw them as. After a bunch of trial and error, what led me to
+the solution was looping through the characters of the xml string, calling `String.grapheme` on each, and printing each on a separate line on the command line.
+I just skimmed through the output and saw how those strange quotes were being
+represented; `<<147>>` and `<<148>>`. I just wrote a function to remove those and
+BAM! SUCCESS! An aggravating problem squashed.
+
+Also, I wrote a module to wrap calls to `HTTPotion` to keep from calling it directly.
+That way, I can easily swap out for another web-scrapper if I decide to down the road.
+
+Lastly, I refactored some function calls to directly pipe into other functions.
+I still get in the habit of ye olde way of declaring temp variables. The code is
+more "Elixiry" now. 
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
