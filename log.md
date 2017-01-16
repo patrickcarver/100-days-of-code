@@ -188,6 +188,33 @@ That way, I can easily swap out for another web-scrapper if I decide to down the
 
 Lastly, I refactored some function calls to directly pipe into other functions.
 I still get in the habit of ye olde way of declaring temp variables. The code is
-more "Elixiry" now. 
+more "Elixiry" now.
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+## Day 9: January 15, 2017, Sunday
+**Today's Progress:**
+Added some tests, modified some modules to use attributes
+
+**Thoughts:**
+Long week of bug squashing at work, so I took a break on Saturday from coding.
+
+Finally put in some tests. Maybe one day I'll practice TDD; it's hard to change
+how you go about coding, though.
+
+ExUnit is pretty straight forward.
+
+Discovered [module attributes](https://elixirschool.com/lessons/basics/modules/)! For a few modules that I used structs to store
+variables acting as constants, I rewrote them to use attributes with simple
+functions exposing them. At first I referred to the the attributes directly. The
+compiler didn't complain, but one of my tests threw an error. After reading some
+documentation I found out that I need some functions to wrap those attributes
+if I wanted to call them from outside their modules.
+
+Removing the structs cleaned up my code nicely. The "base" URL and xml file name
+for the House could now be stored neatly and concatenated in a separate module.
+Also, I no longer had to declare structs for the xquery and xml metadata strings,
+
+I put in a good bit of time today, so it more than makes up for skipping yesterday.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
