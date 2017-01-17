@@ -218,3 +218,25 @@ Also, I no longer had to declare structs for the xquery and xml metadata strings
 I put in a good bit of time today, so it more than makes up for skipping yesterday.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+## Day 10: January 15, 2017, Monday
+**Today's Progress:**
+Moved modules to own files, added a Behaviour to a module.
+
+**Thoughts:**
+Slightly cheating here since I did some more coding after I wrote up yesterday's
+progress, but actually did some this morning.
+
+I had all my modules in one file, so I moved them to their own. Plus, I added
+some comments to the `MsLegis` module.
+
+I added a Behaviour to the `GetXQueryResult` module. In Elixir, a Behaviour
+is similar to an interface in Java, C#, or ActionScript; it tells whatever
+module includes it that it must implement functions with names, arguments, and
+return types specified by that Behaviour.
+
+So why that module? It uses `SweetXml` to return parsed data from xml strings
+passed to it; if I create another module that imports a different 3rd party
+module, I can help ensure that new module works if it implements that Behaviour.
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
