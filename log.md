@@ -219,7 +219,7 @@ I put in a good bit of time today, so it more than makes up for skipping yesterd
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
-## Day 10: January 15, 2017, Monday
+## Day 10: January 16, 2017, Monday
 **Today's Progress:**
 Moved modules to own files, added a Behaviour to a module.
 
@@ -238,5 +238,24 @@ return types specified by that Behaviour.
 So why that module? It uses `SweetXml` to return parsed data from xml strings
 passed to it; if I create another module that imports a different 3rd party
 module, I can help ensure that new module works if it implements that Behaviour.
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+## Day 11: January 17, 2017, Tuesday
+
+**Today's Progress:**
+Started work on parser for member names.
+
+**Thoughts:**
+Actually did some TDD today! I created tests for removing periods and commas in
+member names (e.g. "Ed Blackmon, Jr." -> "Ed Blackmon Jr") and finding members'
+suffixes (e.g. "Sr", "Jr", "III"). Then I created the module and functions needed.
+
+There is simply one string of text from the xml for members' name, so the above
+functions will be needed to break part the text.
+
+I did remove the need for an if/else statement in the `ProcessMemberName.get_suffix`
+function to handle `nil` when there is no suffix found. I used `to_string` on
+the result of the `Enum.find` function; `nil` converts to `""`.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
