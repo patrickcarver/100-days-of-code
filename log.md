@@ -259,3 +259,20 @@ function to handle `nil` when there is no suffix found. I used `to_string` on
 the result of the `Enum.find` function; `nil` converts to `""`.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+## Day 12: January 21, 2017, Saturday
+
+**Today's Progress:**
+Working on putting name in struct
+
+**Thoughts**:
+A few days of short sleep and chugging away at work required a few days hiatus.
+
+Working on creating a struct for the member's name. Found `ExConstructor`, a Hex
+package that allows easy initializing of a struct with values. I changed
+`ProcessMemberName.get_suffix`; instead of passing in the whole name string,
+I created another function `is_suffix?` to determine if the last element in the split name
+string was in a list of suffixes, then `get_suffix` called this function
+and returned the value of the argument if true, and an empty string if not.
+
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper) 
