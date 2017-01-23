@@ -105,7 +105,7 @@ Overall, the app doesn't do anything more, but is structured cleaner.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
-## Day 5: January 8, 2017, Sunday
+### Day 5: January 8, 2017, Sunday
 
 **Today's Progress:**
 Create module to store xquery ...er... queries and a module to perform those queries.
@@ -132,7 +132,7 @@ Oh yeah, I _still_ need to write tests.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
-## Day 6: January 11, 2017, Wednesday
+### Day 6: January 11, 2017, Wednesday
 **Today's Progress:**
 Fixed runtime errors. Started getting assigning variables from member xml data.
 
@@ -149,7 +149,7 @@ to strings.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
-## Day 7: January 12, 2017, Thursday
+### Day 7: January 12, 2017, Thursday
 **Today's Progress:**
 Piddled with getting a stubborn member xml file to process.
 
@@ -166,7 +166,7 @@ embrace not to long after I started coding.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
-## Day 8: January 13, 2017, Friday
+### Day 8: January 13, 2017, Friday
 **Today's Progress:**
 Conquered the the parsing issue with Sam Mim's xml page. Abstracted out fetching
 xml from URLs.
@@ -192,7 +192,7 @@ more "Elixiry" now.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
-## Day 9: January 15, 2017, Sunday
+### Day 9: January 15, 2017, Sunday
 **Today's Progress:**
 Added some tests, modified some modules to use attributes
 
@@ -219,7 +219,7 @@ I put in a good bit of time today, so it more than makes up for skipping yesterd
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
-## Day 10: January 16, 2017, Monday
+### Day 10: January 16, 2017, Monday
 **Today's Progress:**
 Moved modules to own files, added a Behaviour to a module.
 
@@ -241,7 +241,7 @@ module, I can help ensure that new module works if it implements that Behaviour.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
-## Day 11: January 17, 2017, Tuesday
+### Day 11: January 17, 2017, Tuesday
 
 **Today's Progress:**
 Started work on parser for member names.
@@ -260,12 +260,12 @@ the result of the `Enum.find` function; `nil` converts to `""`.
 
 **Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
 
-## Day 12: January 21, 2017, Saturday
+### Day 12: January 21, 2017, Saturday
 
 **Today's Progress:**
 Working on putting name in struct
 
-**Thoughts**:
+**Thoughts:**
 A few days of short sleep and chugging away at work required a few days hiatus.
 
 Working on creating a struct for the member's name. Found `ExConstructor`, a Hex
@@ -275,4 +275,21 @@ I created another function `is_suffix?` to determine if the last element in the 
 string was in a list of suffixes, then `get_suffix` called this function
 and returned the value of the argument if true, and an empty string if not.
 
-**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper) 
+**Link to work:** [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+### Day 13: January 22, 2017, Sunday
+
+**Today's Progress:**
+More struct work; separating tests into separate files
+
+**Thoughts:**
+Continued work on getting a name struct populated. I refactored the `get_last_name`
+ function to two functions using pattern matching instead of a single `if` statment.
+
+ Also, placed module tests into separate files and test cases instead of in a single file.
+ This was useful since I could then put in a `setup_all` for `ProcessMemberNameTest`
+ and not have to have it run for tests that don't need it. It creates a struct to use
+ as comparison on the struct creation functions.
+
+**Link to work:**
+[MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
