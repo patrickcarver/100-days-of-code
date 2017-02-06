@@ -293,3 +293,26 @@ Continued work on getting a name struct populated. I refactored the `get_last_na
 
 **Link to work:**
 [MsLegis](https://github.com/patrickcarver/Mississippi-Legislature-Data-Slurper)
+
+### Day 14: February 5, 2017, Sunday
+
+**Today's Progress:**
+Watched some TreeHouse courses on Swift 3
+
+**Thoughts:**
+A sinus infection that wouldn't go away knocked me down for a while.
+
+I'm putting the MsLegis app on hold for the moment. The "media guy" at my
+church asked me to help in building an iPhone app for the church, mainly
+to let users to make and keep track of contributions. I'm using my TreeHouse
+account to view their Swift 3 / iOS courses and work their exercises.
+
+I'm really digging their content. Easy to follow and explains the concepts well.
+
+I've gone through their courses on Swift 3 to get a grasp on the language itself.
+The main thing that stood out was that functions allow parameters to have an
+"external" name and an "internal name".
+
+For example: a function defined as `func doSomething(interesting value: String) {}`
+  would be called as `doSomething(interesting: "blah")` but the parameter would
+  be referred to as `value` inside the function definition.
