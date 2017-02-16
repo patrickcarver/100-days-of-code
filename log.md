@@ -316,3 +316,18 @@ The main thing that stood out was that functions allow parameters to have an
 For example: a function defined as `func doSomething(interesting value: String) {}`
   would be called as `doSomething(interesting: "blah")` but the parameter would
   be referred to as `value` inside the function definition.
+
+### Day 15: February 7, 2017, Tuesday
+
+**Today's Progress:**
+Watched Treehouse courses on building iOS app
+
+**Thoughts:**  
+Church small group Monday night, so no work then.
+
+Started the courses on how to build an app. The tutorial is a simple app that
+allows you to press a button and get a random fact.
+
+Like the Swift 3 courses, these courses are pretty clear and straight forward.
+
+The iOS simulator is very slow getting started.
